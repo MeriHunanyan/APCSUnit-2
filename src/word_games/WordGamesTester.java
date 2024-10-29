@@ -6,21 +6,31 @@ public class WordGamesTester {
         Scanner input = new Scanner(System.in);
 
         // Ask for a word
-
+        System.out.println("Give me a word: ");
+        String UserWorld = input.nextLine();
+        WordGames game = new WordGames(UserWorld);
         // Scramble it
+        String ScrambleWord = game.scramble();
         // Print out scrambled word
+        System.out.println(ScrambleWord);
+
 
         // Ask for an index
+        System.out.println("Give me an index(int): ");
+        int insertIdx = input.nextInt();
         // Ask for random word
-        System.out.println("Enter an integer: ");
-        int idx = input.nextInt();
+        System.out.println("Give me a word");
+        String ogString = input.nextLine();
+
+
         input.nextLine();  // skip over the newline
         System.out.println("Enter another word: ");
-        String word = input.nextLine();
+        String insertText = input.nextLine();
 
         // Add random word at index
+        String wordAtIdx = game.bananaSplit(insertIdx, insertText, ogString);
         // Print out the word
-
+        System.out.println(wordAtIdx);
 
         // Ask for a character (store as a String)
         // Ask for random word

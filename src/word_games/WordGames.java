@@ -23,7 +23,12 @@ public class WordGames
     {
         // switch first half
         // and second half
-        return "";
+        int numChars = word.length();
+        int halfPoint = numChars / 2;
+        String firstHalf = word.substring(0,halfPoint);
+        String secondHalf = word.substring(halfPoint);
+
+        return secondHalf + firstHalf;
 
     }
 
@@ -33,11 +38,12 @@ public class WordGames
      * @param insertText String text to be inserted
      * @return modified text
      */
-    public String bananaSplit(int insertIdx, String insertText)
+    public String bananaSplit(int insertIdx,String insertText, String ogString)
     {
+        System.out.println(ogString.length());
         // Insert insertText at the position
         // insertIdx
-        return "";
+        return ogString.substring(0, insertIdx) + insertText + ogString.substring(insertIdx);
 
     }
 
